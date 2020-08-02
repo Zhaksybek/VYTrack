@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="suite1">
+    <test name="test1">
+        <parameter name="tea" value="Aylin"></parameter>
+
+       <classes>
+           <class name="com.vytrack.tests.ParametersTestNG"></class>
+
+       </classes>
+    </test>
+
+</suite>

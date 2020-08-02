@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestBase {
 
     @Test(description = "Just login and verify title")
-    public void loginTest() {
+    public void loginTest() throws InterruptedException {
 
         LoginPage loginPage = new LoginPage();
         loginPage.login();
@@ -17,12 +17,13 @@ public class LoginTests extends TestBase {
 
         String actual = Driver.getDriver().getTitle();
         System.out.println(actual);
+
         String expected = "Dashboard";
+        Thread.sleep(3000);
         Assert.assertTrue(actual.contains(expected));
 
 
     }
-
 
 
 }
